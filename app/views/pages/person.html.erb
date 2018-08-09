@@ -1,0 +1,28 @@
+<h1>Random Person</h1>
+
+
+
+<% @name = Faker::Name.first_name %>
+<br>
+<% @guess = Guess.gender("#{@name}")[:gender] %>
+<% @guess %>
+
+
+<% @female_photo = UiFaces.sex('woman')%>
+<% @male_photo = UiFaces.sex('man')%>
+
+<% if @guess == "male" %>
+<img src="<%= @male_photo%>" alt="">
+<% end %>
+
+<% if @guess == "female" %>
+<img src="<%= @female_photo%>" alt="">
+<% end %>
+
+<br>
+<%= @name %>
+<br>
+<%= Faker::Name.last_name %>
+
+<br>
+<br>

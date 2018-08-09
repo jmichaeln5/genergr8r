@@ -1,0 +1,6 @@
+<h1>Female#index</h1>
+
+<%= @name = Faker::Name.first_name %>
+<%= Faker::Name.last_name %>
+
+<%= Guess.gender("#{@name}")[:gender] %>
