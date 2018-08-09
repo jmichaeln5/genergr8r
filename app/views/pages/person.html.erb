@@ -18,11 +18,10 @@
 <% if @guess == "female" %>
 <img src="<%= @female_photo%>" alt="" style="width:50%;height:50%;">
 <% end %>
-
 <br>
-<%= @name %>
 <br>
-<%= Faker::Name.last_name %>
+<h2><%= @name %> </h2>
+<h2> <%= Faker::Name.last_name %> </h2>
 
 <br>
 <br>
